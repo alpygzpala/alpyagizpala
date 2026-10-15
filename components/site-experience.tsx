@@ -39,6 +39,11 @@ export default function SiteExperience() {
     document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
     const updateProgress = () => {
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const hero = document.querySelector<HTMLElement>(".hero");
+      const heroProgress = hero
+        ? Math.min(1, Math.max(0, window.scrollY / (hero.offsetHeight * 0.78)))
+        : 0;
+      hero?.style.setProperty("--scene-progress", heroProgress.toFixed(3));
       if (progressRef.current) {
         progressRef.current.style.transform = `scaleX(${scrollable > 0 ? window.scrollY / scrollable : 0})`;
       }
