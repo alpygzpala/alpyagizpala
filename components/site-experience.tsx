@@ -12,22 +12,6 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return <span aria-hidden="true" className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">{diagonal ? "↗" : "→"}</span>;
 }
 
-function OrbitalMark() {
-  return (
-    <div className="orbital-mark" aria-label="Merak, fikir ve üretimi temsil eden soyut grafik">
-      <div className="orbital-mark__halo" />
-      <div className="orbital-mark__ring orbital-mark__ring--one" />
-      <div className="orbital-mark__ring orbital-mark__ring--two" />
-      <div className="orbital-mark__ring orbital-mark__ring--three" />
-      <div className="orbital-mark__core"><span>AP</span><i>✳</i></div>
-      <div className="orbital-mark__satellite orbital-mark__satellite--one" />
-      <div className="orbital-mark__satellite orbital-mark__satellite--two" />
-      <span className="orbital-label orbital-label--one">IDEA / 001</span>
-      <span className="orbital-label orbital-label--two">MAKE IT MATTER</span>
-    </div>
-  );
-}
-
 function ProjectArtwork({ index }: { index: number }) {
   if (index === 0) {
     return <div className="artwork artwork--interface"><div className="mini-window"><div className="mini-window__top"><span /><span /><span /><b>studio / today</b></div><div className="mini-window__body"><div className="mini-label">A CLEARER WAY FORWARD</div><div className="mini-title">Make space<br /><i>for better.</i></div><div className="mini-line" /><div className="mini-cta">EXPLORE <span>↗</span></div></div></div><span className="art-orbit" /></div>;
@@ -85,16 +69,17 @@ export default function SiteExperience() {
 
       <main id="top">
         <section className="hero page-gutter">
+          <div className="hero-scene-image" role="img" aria-label="Sisli kar düzlüklerinde yükselen ışıklı kristal heykel" />
           <div className="hero-kicker"><span>ALPYAGIZ PALA</span><span>DİJİTAL ÇALIŞMA ALANI <b>—</b> 001</span></div>
           <div className="hero-main">
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-line" /> TASARIM · TEKNOLOJİ · MERAK</p>
-              <h1>Fikirden<br /><em>etkiye.</em></h1>
-              <div className="hero-bottomline"><p>Merak ettiğim şeyleri, insanların<br className="desktop-break" /> hayatına değen dijital deneyimlere<br className="desktop-break" /> dönüştürüyorum.</p><a className="circle-link group" href="#about" aria-label="Hakkımda bölümüne ilerle"><Arrow /></a></div>
+              <h1>İyi fikirler<br /><em>bir yere</em><br />varır.</h1>
+              <div className="hero-bottomline"><p>Merak ettiğim şeyleri,<br className="desktop-break" /> insanların hayatına değen<br className="desktop-break" /> dijital deneyimlere dönüştürüyorum.</p><a className="circle-link group" href="#about" aria-label="Hakkımda bölümüne ilerle"><Arrow /></a></div>
             </div>
-            <div className="hero-visual"><OrbitalMark /><span className="hero-visual-caption">A SMALL UNIVERSE<br />OF CURIOSITY</span></div>
+            <div className="hero-scene-note"><span>01 — 04</span><i /><span>MERAKTAN<br />DENEYİME</span></div>
           </div>
-          <div className="hero-footer"><span>SCROLL TO EXPLORE</span><div className="hero-footer-line"><i /></div><span>İYİ İŞLER, İYİ SORULARLA BAŞLAR.</span></div>
+          <div className="hero-footer"><span>KAYDIRARAK KEŞFET</span><div className="hero-footer-line"><i /></div><span>HER ŞEY BİR SORUYLA BAŞLAR.</span></div>
         </section>
 
         <section className="intro-section page-gutter" id="about">
